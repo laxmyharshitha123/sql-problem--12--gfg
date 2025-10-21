@@ -1,0 +1,11 @@
+## 18. Calculate the total revenue generated from sales of products in the 'Electronics' category.
+Query:
+
+SELECT SUM(Sales.total_price) AS total_revenue 
+FROM Sales 
+JOIN Products ON Sales.product_id = Products.product_id 
+WHERE Products.category = 'Electronics';
+Output:
+
+total_revenue
+3630.00
